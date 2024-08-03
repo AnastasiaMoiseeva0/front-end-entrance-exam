@@ -1,0 +1,5 @@
+.avatar {
+    width: 124px;
+    height: 124px;
+    grid-area: 1/1/2/2;
+}

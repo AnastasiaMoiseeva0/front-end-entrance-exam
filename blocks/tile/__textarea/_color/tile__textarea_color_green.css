@@ -1,0 +1,7 @@
+.tile__textarea_color_green {
+    color: #149063;
+}
+
+.tile__textarea_color_green.tile__textarea:focus {
+    outline: 1px solid #149063;
+}

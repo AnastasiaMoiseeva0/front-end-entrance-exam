@@ -1,0 +1,12 @@
+.tile__textarea {
+    background-color: transparent;
+    border: none;
+    width: fit-content;
+    height: 100%;
+    white-space: pre-line;
+}
+
+.tile__textarea:focus {
+    outline: 1px solid #3F3D3D;
+    border-radius: 4px;
+}

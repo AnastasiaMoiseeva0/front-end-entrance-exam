@@ -1,0 +1,5 @@
+.tools__icon-wrapper {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    gap: 16px;
+}

@@ -1,0 +1,11 @@
+.languages__progress-bar {
+    margin: 0;
+    margin-bottom: 10px;
+    column-gap: 17px;
+    display: grid;
+    grid-template-columns: 58px 1fr;
+}
+
+.languages__progress-bar:last-of-type {
+    margin-bottom: 0;
+}

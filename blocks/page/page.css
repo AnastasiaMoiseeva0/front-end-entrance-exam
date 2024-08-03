@@ -1,0 +1,23 @@
+.page {
+    background: #fff;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #000;
+    min-width: 320px;
+    padding: 15px 20px;
+}
+
+@media print {
+    body {-webkit-print-color-adjust: exact;}
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+@media screen and (min-width: 769px) {
+    .page {
+        max-width: 555px;
+        margin: 0 auto;
+    }
+}
