@@ -1,0 +1,6 @@
+.education__card {
+    max-width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

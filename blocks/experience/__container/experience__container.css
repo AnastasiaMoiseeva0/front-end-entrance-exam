@@ -1,0 +1,5 @@
+.experience__container {
+    display: grid;
+    grid-template-columns: 124px 1fr;
+    column-gap: 8px;
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Exam CV</title>
+        <link rel="stylesheet" href="./pages/index.css" />
+        <script defer type="module" src="./pages/index.js"></script>
+    </head>
+    <body class="page">
+        <main class="resume">
+            <section class="avatar">
+                <img src="./assets/images/profileImg.png" alt="аватар" />
+            </section>
+            <section class="tile profile">
+                <header class="tile__header tile__header_medium">Hello 👋🏻 I'm</header>
+                <p name="name" resume-field="name" class="profile__name tile__textarea">Karthik SR</p>
+                <p resume-field="job" class="profile__profession tile__textarea">UX/UI Designer</p>
+            </section>
+            <section class="tile languages">
+                <header class="tile__header">Languages</header>
+                <ul class="languages__progress-bar">
+                    <li class="languages__description">English</li>
+                    <li class="languages__scale"></li>
+                </ul>
+                <ul class="languages__progress-bar">
+                    <li class="languages__description">Malayalam</li>
+                    <li class="languages__scale"></li>
+                </ul>
+                <ul class="languages__progress-bar">
+                    <li class="languages__description">Hindi</li>
+                    <li class="languages__scale languages__scale_part"></li>
+                </ul>
+            </section>
+            <section class="tile experience">
+                <header class="tile__header">Experience</header>
+                <div class="experience__section">
+                    <article class="tile tile_green tile_size_m">
+                        <div class="experience__header">
+                            <p
+                                class="tile__header tile__header_small tile__textarea tile__textarea_color_white"
+                                resume-field="firstJobDates"
+                            >
+                                Jun. 2023 - Present
+                            </p>
+                            <div class="tile__tag">most recent</div>
+                        </div>
+                        <div class="experience__container">
+                            <div class="experience__caption">
+                                <p
+                                    resume-field="thirdWork"
+                                    class="experience__profession tile__textarea tile__textarea_color_white"
+                                >
+                                    Marketing Manager
+                                </p>
+                                <p
+                                    resume-field="thirdBusyness"
+                                    class="experience__busyness tile__textarea tile__textarea_color_white"
+                                >
+                                    Pankayam | Full-time
+                                </p>
+                            </div>
+                            <div class="experience__content">
+                                <p
+                                    resume-field="thirdPeriod"
+                                    class="experience__busyness tile__textarea tile__textarea_color_white"
+                                >
+                                    &bull;&nbsp;Strategy development and planning of campaigns that
+                                    &nbsp;&nbsp;&nbsp;promote the business and generate genuine traffic
+                                    &bull;&nbsp;SEO Content Creation for Blogs, Website, Social media
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tile tile_secondary tile_size_m">
+                        <p resume-field="secondJobDates" class="tile__header tile__header_small tile__textarea">
+                            2017&nbsp;&mdash; Present
+                        </p>
+                        <div class="experience__container">
+                            <div class="experience__caption">
+                                <p resume-field="secondWork" class="experience__profession tile__textarea">
+                                    Graphic&nbsp;/ Web designer
+                                </p>
+                                <p
+                                    resume-field="secondBusyness"
+                                    class="experience__busyness experience__busyness_gray tile__textarea"
+                                >
+                                    Freelance
+                                </p>
+                            </div>
+                            <div class="experience__content">
+                                <p resume-field="secondPeriod" class="experience__busyness tile__textarea">
+                                    &bull; Development of internal projects from scratch, product design of brands
+                                    &bull; Landing page, webapps and hybrid apps &bull; Coordinating with outside agencies, art services, web designer, marketing, printers, and
+                                    colleagues as necessary.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tile tile_secondary tile_size_m">
+                        <p resume-field="firstJobDates" class="tile__header tile__header_small tile__textarea">
+                            Sep.&nbsp;2021&nbsp;&mdash; Jun.&nbsp;2023
+                        </p>
+                        <div class="experience__container">
+                            <div class="experience__caption">
+                                <p resume-field="firstWork" class="experience__profession tile__textarea">
+                                    Legal Assistant
+                                </p>
+                                <p
+                                    resume-field="firstBusyness"
+                                    class="experience__busyness experience__busyness_gray tile__textarea"
+                                >
+                                    Law Firm&nbsp;&nbsp;|&nbsp;&nbsp;Intern
+                                </p>
+                            </div>
+                            <div class="experience__content">
+                                <p resume-field="firstPeriod" class="experience__busyness tile__textarea">
+                                    &bull; Provide administrative support to lawyer and enhance office effectiveness
+                                    &bull; Handle communication with clients, witnesses etc. &bull; repare case briefs
+                                    and summarize depositions,interrogatories and testimony
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="tile tools">
+                <header class="tile__header">Tools</header>
+                <div class="tools__container">
+                    <div class="tile tile_secondary tile_size_s">
+                        <div class="tools__tag tile__tag tile__tag_color_black">design</div>
+                        <div class="tools__icon-wrapper">
+                            <img src="./assets/icons/logoFigma.svg" alt="логотип figma" />
+                            <img src="./assets/icons/icon_adobe_photoshop.svg" alt="логотип photoshop" />
+                            <img src="./assets/icons/icon_adobe_illustrator.svg" alt="логотип illustrator" />
+                            <img src="./assets/icons/icon_adobe_premiere.svg" alt="логотип premiere" />
+                            <img src="./assets/icons/logoNotion.svg" alt="логотип notion" />
+                            <img src="./assets/icons/logoMeet.svg" alt="логотип google meet" />
+                        </div>
+                    </div>
+                    <div class="tile tile_secondary tile_size_s">
+                        <div class="tools__tag tile__tag tile__tag_color_black">no-code</div>
+                        <div class="tools__icon-wrapper">
+                            <img src="./assets/icons/logoZapìer.svg" alt="логотип zapìer" />
+                            <img src="./assets/icons/logoWebflow.svg" alt="логотип webflow" />
+                            <img src="./assets/icons/logoFramer.svg" alt="логотип framer" />
+                            <img src="./assets/icons/logoWordpress.svg" alt="логотип wordpress" />
+                        </div>
+                    </div>
+                    <div class="tile tile_secondary tile_size_s">
+                        <div class="tools__tag tile__tag tile__tag_color_black">artoficial intelligence</div>
+                        <div class="tools__icon-wrapper">
+                            <img src="./assets/icons/logoChatGPT.svg" alt="логотип chatGPT" />
+                            <img src="./assets/icons/logoCopilot.svg" alt="логотип copylot" />
+                            <img src="./assets/icons/logoMidjourney.svg" alt="логотип midjourney" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="tile education">
+                <header class="tile__header">Education</header>
+                <div class="education__container">
+                    <article class="tile tile_green tile_size_m education__card">
+                        <div class="education__header-wrapper">
+                            <p class="tile__header tile__header_medium" resume-field="educationYear">2023</p>
+                            <img class="education__icon" src="./assets/icons/like.svg" alt="иконка лайк" />
+                        </div>
+                        <p class="education__profession">UI/UX</p>
+                        <p
+                            resume-field="thirdHashtag"
+                            class="education__item tile__textarea tile__textarea_color_white"
+                        >#UX #UI #research #DesignSystem #Ui #wireframing #figma #Ux</p>
+                        <p class="education__university">Coursera</p>
+                    </article>
+                    <article class="tile tile_secondary tile_size_m education__card">
+                        <p class="tile__header tile__header_medium">2017&nbsp;&mdash; 2022</p>
+                        <p class="education__profession">Law</p>
+                        <p resume-field="secondHashtag" class="education__item tile__textarea tile__textarea_color_green">#law #legalStudies #contracts #internationalLaws</p>
+                        <p class="education__university">University of Kerala</p>
+                    </article>
+                    <article class="tile tile_secondary tile_size_m education__card">
+                        <p class="tile__header tile__header_medium">2017</p>
+                        <p class="education__profession">Graphic design</p>
+                        <p resume-field="firstHashtag" class="education__item tile__textarea tile__textarea_color_green">#branding #web #illustration #adobe</p>
+                        <p class="education__university">Coursera</p>
+                    </article>
+                </div>
+            </section>
+            <section class="tile interests">
+                <header class="tile__header">Interests</header>
+                <div class="interests__container">
+                    <span class="tile__tag tile__tag_color_white">branding</span>
+                    <span class="tile__tag tile__tag_color_white">design</span>
+                    <span class="tile__tag tile__tag_color_white">photography</span>
+                    <span class="tile__tag tile__tag_color_white">artificial intelligence</span>
+                    <span class="tile__tag tile__tag_color_white">illustration</span>
+                    <span class="tile__tag tile__tag_color_white">typography</span>
+                    <span class="tile__tag tile__tag_color_white">social networks</span>
+                    <span class="tile__tag tile__tag_color_white">research</span>
+                    <span class="tile__tag tile__tag_color_white">dron pilot</span>
+                    <span class="tile__tag tile__tag_color_white">games</span>
+                </div>
+            </section>
+            <section class="tile tile_black contacts">
+                <header class="tile__header">
+                    Let&acute;s chat! I&acute;m ready to&nbsp;work on&nbsp;excinting projects
+                </header>
+                <p class="contacts__mail">srkarthik.designscape@gmail.com</p>
+            </section>
+            <button class="button">Скачать резюме</button>
+        </main>
+    </body>
+</html>
