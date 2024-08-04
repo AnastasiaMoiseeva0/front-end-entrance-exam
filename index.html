@@ -1,60 +1,60 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Exam CV</title>
         <link rel="stylesheet" href="./pages/index.css" />
-        <script defer type="module" src="./pages/index.js"></script>
+        <script defer src="./pages/index.js"></script>
+        <script defer src="./pages/js/material-wave.js"></script>
+        <script defer src="./pages/js/print-dicument.js"></script>
     </head>
     <body class="page">
         <main class="resume">
-            <section class="avatar">
-                <img src="./assets/images/profileImg.png" alt="аватар" />
-            </section>
+            <img class="avatar" src="./assets/images/profileImg.png" alt="аватар" />
             <section class="tile profile">
-                <header class="tile__header tile__header_medium">Hello 👋🏻 I'm</header>
-                <p name="name" resume-field="name" class="profile__name tile__textarea">Karthik SR</p>
-                <p resume-field="job" class="profile__profession tile__textarea">UX/UI Designer</p>
+                <h2 class="tile__header tile__header_medium">Hello 👋🏻 I'm</h2>
+                <p data-resume-field="name" class="profile__name tile__textarea">Karthik SR</p>
+                <p data-resume-field="job" class="profile__profession tile__textarea">UX/UI Designer</p>
             </section>
             <section class="tile languages">
-                <header class="tile__header">Languages</header>
+                <h2 data-resume-field="languages" class="tile__header tile__textarea">Languages</h2>
                 <ul class="languages__progress-bar">
-                    <li class="languages__description">English</li>
+                    <li data-resume-field="language1" class="languages__description tile__textarea">English</li>
                     <li class="languages__scale"></li>
                 </ul>
                 <ul class="languages__progress-bar">
-                    <li class="languages__description">Malayalam</li>
+                    <li data-resume-field="language2" class="languages__description tile__textarea">Malayalam</li>
                     <li class="languages__scale"></li>
                 </ul>
                 <ul class="languages__progress-bar">
-                    <li class="languages__description">Hindi</li>
+                    <li data-resume-field="language3" class="languages__description tile__textarea">Hindi</li>
                     <li class="languages__scale languages__scale_part"></li>
                 </ul>
             </section>
             <section class="tile experience">
-                <header class="tile__header">Experience</header>
+                <h2 data-resume-field="experience" class="tile__header tile__textarea">Experience</h2>
                 <div class="experience__section">
                     <article class="tile tile_green tile_size_m">
                         <div class="experience__header">
-                            <p
+                            <h3
                                 class="tile__header tile__header_small tile__textarea tile__textarea_color_white"
-                                resume-field="firstJobDates"
+                                data-resume-field="firstJobDates"
                             >
                                 Jun. 2023 - Present
-                            </p>
+                            </h3>
                             <div class="tile__tag">most recent</div>
                         </div>
                         <div class="experience__container">
                             <div class="experience__caption">
                                 <p
-                                    resume-field="thirdWork"
+                                    data-resume-field="thirdWork"
                                     class="experience__profession tile__textarea tile__textarea_color_white"
                                 >
                                     Marketing Manager
                                 </p>
                                 <p
-                                    resume-field="thirdBusyness"
+                                    data-resume-field="thirdBusyness"
                                     class="experience__busyness tile__textarea tile__textarea_color_white"
                                 >
                                     Pankayam | Full-time
@@ -62,7 +62,7 @@
                             </div>
                             <div class="experience__content">
                                 <p
-                                    resume-field="thirdPeriod"
+                                    data-resume-field="thirdPeriod"
                                     class="experience__busyness tile__textarea tile__textarea_color_white"
                                 >
                                     &bull;&nbsp;Strategy development and planning of campaigns that
@@ -73,51 +73,56 @@
                         </div>
                     </article>
                     <article class="tile tile_secondary tile_size_m">
-                        <p resume-field="secondJobDates" class="tile__header tile__header_small tile__textarea">
+                        <h3 data-resume-field="secondJobDates" class="tile__header tile__header_small tile__textarea">
                             2017&nbsp;&mdash; Present
-                        </p>
+                        </h3>
                         <div class="experience__container">
                             <div class="experience__caption">
-                                <p resume-field="secondWork" class="experience__profession tile__textarea">
+                                <p data-resume-field="secondWork" class="experience__profession tile__textarea">
                                     Graphic&nbsp;/ Web designer
                                 </p>
                                 <p
-                                    resume-field="secondBusyness"
+                                    data-resume-field="secondBusyness"
                                     class="experience__busyness experience__busyness_gray tile__textarea"
                                 >
                                     Freelance
                                 </p>
                             </div>
                             <div class="experience__content">
-                                <p resume-field="secondPeriod" class="experience__busyness tile__textarea">
-                                    &bull; Development of internal projects from scratch, product design of brands
-                                    &bull; Landing page, webapps and hybrid apps &bull; Coordinating with outside agencies, art services, web designer, marketing, printers, and
-                                    colleagues as necessary.
+                                <p data-resume-field="secondPeriod" class="experience__busyness tile__textarea">
+                                    &bull;&nbsp;Development of internal projects from scratch, product
+                                    &nbsp;&nbsp;design of brands
+                                    &bull;&nbsp;Landing page, webapps and hybrid apps
+                                    &bull;&nbsp;Coordinating with outside agencies, art services, web
+                                    &nbsp;&nbsp;&nbsp;designer, marketing, printers, and colleagues 
+                                    &nbsp;&nbsp;&nbsp;as necessary.
                                 </p>
                             </div>
                         </div>
                     </article>
                     <article class="tile tile_secondary tile_size_m">
-                        <p resume-field="firstJobDates" class="tile__header tile__header_small tile__textarea">
+                        <h3 data-resume-field="firstJobDates" class="tile__header tile__header_small tile__textarea">
                             Sep.&nbsp;2021&nbsp;&mdash; Jun.&nbsp;2023
-                        </p>
+                        </h3>
                         <div class="experience__container">
                             <div class="experience__caption">
-                                <p resume-field="firstWork" class="experience__profession tile__textarea">
+                                <p data-resume-field="firstWork" class="experience__profession tile__textarea">
                                     Legal Assistant
                                 </p>
                                 <p
-                                    resume-field="firstBusyness"
+                                    data-resume-field="firstBusyness"
                                     class="experience__busyness experience__busyness_gray tile__textarea"
                                 >
                                     Law Firm&nbsp;&nbsp;|&nbsp;&nbsp;Intern
                                 </p>
                             </div>
                             <div class="experience__content">
-                                <p resume-field="firstPeriod" class="experience__busyness tile__textarea">
-                                    &bull; Provide administrative support to lawyer and enhance office effectiveness
-                                    &bull; Handle communication with clients, witnesses etc. &bull; repare case briefs
-                                    and summarize depositions,interrogatories and testimony
+                                <p data-resume-field="firstPeriod" class="experience__busyness tile__textarea">
+                                    &bull;&nbsp;Provide administrative support to lawyer and enhance
+                                    &nbsp;&nbsp;office effectiveness
+                                    &bull;&nbsp;Handle communication with clients, witnesses etc.
+                                    &bull;&nbsp;repare case briefs and summarize depositions,
+                                    &nbsp;&nbsp;interrogatories and testimony
                                 </p>
                             </div>
                         </div>
@@ -125,89 +130,146 @@
                 </div>
             </section>
             <section class="tile tools">
-                <header class="tile__header">Tools</header>
+                <h2 data-resume-field="tools" class="tile__header tile__textarea">Tools</h2>
                 <div class="tools__container">
-                    <div class="tile tile_secondary tile_size_s">
+                    <div class="tools__item">
                         <div class="tools__tag tile__tag tile__tag_color_black">design</div>
-                        <div class="tools__icon-wrapper">
-                            <img src="./assets/icons/logoFigma.svg" alt="логотип figma" />
-                            <img src="./assets/icons/icon_adobe_photoshop.svg" alt="логотип photoshop" />
-                            <img src="./assets/icons/icon_adobe_illustrator.svg" alt="логотип illustrator" />
-                            <img src="./assets/icons/icon_adobe_premiere.svg" alt="логотип premiere" />
-                            <img src="./assets/icons/logoNotion.svg" alt="логотип notion" />
-                            <img src="./assets/icons/logoMeet.svg" alt="логотип google meet" />
+                        <div class="tile tile_secondary tile_size_s">
+                            <div class="tools__icon-wrapper">
+                                <img src="./assets/icons/logoFigma.svg" alt="логотип figma" />
+                                <img src="./assets/icons/icon_adobe_photoshop.svg" alt="логотип photoshop" />
+                                <img src="./assets/icons/icon_adobe_illustrator.svg" alt="логотип illustrator" />
+                                <img src="./assets/icons/icon_adobe_premiere.svg" alt="логотип premiere" />
+                                <img src="./assets/icons/logoNotion.svg" alt="логотип notion" />
+                                <img src="./assets/icons/logoMeet.svg" alt="логотип google meet" />
+                            </div>
                         </div>
                     </div>
-                    <div class="tile tile_secondary tile_size_s">
+                    <div class="tools__item">
                         <div class="tools__tag tile__tag tile__tag_color_black">no-code</div>
-                        <div class="tools__icon-wrapper">
-                            <img src="./assets/icons/logoZapìer.svg" alt="логотип zapìer" />
-                            <img src="./assets/icons/logoWebflow.svg" alt="логотип webflow" />
-                            <img src="./assets/icons/logoFramer.svg" alt="логотип framer" />
-                            <img src="./assets/icons/logoWordpress.svg" alt="логотип wordpress" />
+                        <div class="tile tile_secondary tile_size_s">
+                            <div class="tools__icon-wrapper">
+                                <img src="./assets/icons/logoZapìer.svg" alt="логотип zapìer" />
+                                <img src="./assets/icons/logoWebflow.svg" alt="логотип webflow" />
+                                <img src="./assets/icons/logoFramer.svg" alt="логотип framer" />
+                                <img src="./assets/icons/logoWordpress.svg" alt="логотип wordpress" />
+                            </div>
                         </div>
                     </div>
-                    <div class="tile tile_secondary tile_size_s">
+                    <div class="tools__item">
                         <div class="tools__tag tile__tag tile__tag_color_black">artoficial intelligence</div>
-                        <div class="tools__icon-wrapper">
-                            <img src="./assets/icons/logoChatGPT.svg" alt="логотип chatGPT" />
-                            <img src="./assets/icons/logoCopilot.svg" alt="логотип copylot" />
-                            <img src="./assets/icons/logoMidjourney.svg" alt="логотип midjourney" />
+                        <div class="tile tile_secondary tile_size_s">
+                            <div class="tools__icon-wrapper">
+                                <img src="./assets/icons/logoChatGPT.svg" alt="логотип chatGPT" />
+                                <img src="./assets/icons/logoCopilot.svg" alt="логотип copylot" />
+                                <img src="./assets/icons/logoMidjourney.svg" alt="логотип midjourney" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="tile education">
-                <header class="tile__header">Education</header>
+                <h2 data-resume-field="education" class="tile__header tile__textarea">Education</h2>
                 <div class="education__container">
                     <article class="tile tile_green tile_size_m education__card">
                         <div class="education__header-wrapper">
-                            <p class="tile__header tile__header_medium" resume-field="educationYear">2023</p>
+                            <h3
+                                class="tile__header tile__header_medium tile__textarea tile__textarea_color_white"
+                                data-resume-field="educationYearThird"
+                            >
+                                2023
+                            </h3>
                             <img class="education__icon" src="./assets/icons/like.svg" alt="иконка лайк" />
                         </div>
-                        <p class="education__profession">UI/UX</p>
+                        <p class="education__profession tile__textarea tile__textarea_color_white" data-resume-field="jobThird">UI/UX</p>
                         <p
-                            resume-field="thirdHashtag"
+                            data-resume-field="thirdHashtag"
                             class="education__item tile__textarea tile__textarea_color_white"
-                        >#UX #UI #research #DesignSystem #Ui #wireframing #figma #Ux</p>
-                        <p class="education__university">Coursera</p>
+                        >
+                            #UX #UI #research #DesignSystem #Ui #wireframing #figma #Ux
+                        </p>
+                        <p class="education__university tile__textarea tile__textarea_color_white" data-resume-field="universityThird">Coursera</p>
                     </article>
                     <article class="tile tile_secondary tile_size_m education__card">
-                        <p class="tile__header tile__header_medium">2017&nbsp;&mdash; 2022</p>
-                        <p class="education__profession">Law</p>
-                        <p resume-field="secondHashtag" class="education__item tile__textarea tile__textarea_color_green">#law #legalStudies #contracts #internationalLaws</p>
-                        <p class="education__university">University of Kerala</p>
+                        <h3
+                            class="tile__header tile__header_medium tile__textarea"
+                            data-resume-field="educationYearSecond"
+                        >
+                            2017&nbsp;&mdash; 2022
+                        </h3>
+                        <p class="education__profession tile__textarea" data-resume-field="jobSecond">Law</p>
+                        <p
+                            data-resume-field="secondHashtag"
+                            class="education__item tile__textarea tile__textarea_color_green"
+                        >
+                            #law #legalStudies #contracts #internationalLaws
+                        </p>
+                        <p class="education__university tile__textarea" data-resume-field="universitySecond">
+                            University of Kerala
+                        </p>
                     </article>
                     <article class="tile tile_secondary tile_size_m education__card">
-                        <p class="tile__header tile__header_medium">2017</p>
-                        <p class="education__profession">Graphic design</p>
-                        <p resume-field="firstHashtag" class="education__item tile__textarea tile__textarea_color_green">#branding #web #illustration #adobe</p>
-                        <p class="education__university">Coursera</p>
+                        <h3
+                            class="tile__header tile__header_medium tile__textarea"
+                            data-resume-field="educationYearFirst"
+                        >
+                            2017
+                        </h3>
+                        <p class="education__profession tile__textarea" data-resume-field="jobFirst">Graphic design</p>
+                        <p
+                            data-resume-field="firstHashtag"
+                            class="education__item tile__textarea tile__textarea_color_green"
+                        >
+                            #branding #web #illustration #adobe
+                        </p>
+                        <p class="education__university tile__textarea" data-resume-field="universityFirst">Coursera</p>
                     </article>
                 </div>
             </section>
             <section class="tile interests">
-                <header class="tile__header">Interests</header>
-                <div class="interests__container">
-                    <span class="tile__tag tile__tag_color_white">branding</span>
-                    <span class="tile__tag tile__tag_color_white">design</span>
-                    <span class="tile__tag tile__tag_color_white">photography</span>
-                    <span class="tile__tag tile__tag_color_white">artificial intelligence</span>
-                    <span class="tile__tag tile__tag_color_white">illustration</span>
-                    <span class="tile__tag tile__tag_color_white">typography</span>
-                    <span class="tile__tag tile__tag_color_white">social networks</span>
-                    <span class="tile__tag tile__tag_color_white">research</span>
-                    <span class="tile__tag tile__tag_color_white">dron pilot</span>
-                    <span class="tile__tag tile__tag_color_white">games</span>
-                </div>
+                <h2 data-resume-field="interests" class="tile__header tile__textarea">Interests</h2>
+                <ul class="interests__container">
+                    <li class="tile__tag tile__tag_color_white">
+                        <span class="tile__textarea" data-resume-field="tag1">branding</span>
+                    </li>
+                    <li class="tile__tag tile__tag_color_white">
+                        <span class="tile__textarea" data-resume-field="tag2">design</span>
+                    </li>
+                    <li class="tile__tag tile__tag_color_white">
+                        <span class="tile__textarea" data-resume-field="tag3">photography</span>
+                    </li>
+                    <li class="tile__tag tile__tag_color_white">
+                        <span class="tile__textarea" data-resume-field="tag4">artificial intelligence</span>
+                    </li>
+                    <li class="tile__tag tile__tag_color_white">
+                        <span class="tile__textarea" data-resume-field="tag5">illustration</span>
+                    </li>
+                    <li class="tile__tag tile__tag_color_white">
+                        <span class="tile__textarea" data-resume-field="tag6">social networks</span>
+                    </li>
+                    <li class="tile__tag tile__tag_color_white">
+                        <span class="tile__textarea" data-resume-field="tag7">social networks</span>
+                    </li>
+                    <li class="tile__tag tile__tag_color_white">
+                        <span class="tile__textarea" data-resume-field="tag8">research</span>
+                    </li>
+                    <li class="tile__tag tile__tag_color_white">
+                        <span class="tile__textarea" data-resume-field="tag9">dron pilot</span>
+                    </li>
+                    <li class="tile__tag tile__tag_color_white">
+                        <span class="tile__textarea" data-resume-field="tag10">games</span>
+                    </li>
+                </ul>
             </section>
             <section class="tile tile_black contacts">
-                <header class="tile__header">
+                <h2 class="tile__header tile__textarea tile__textarea_color_white" data-resume-field="contacts">
                     Let&acute;s chat! I&acute;m ready to&nbsp;work on&nbsp;excinting projects
-                </header>
-                <p class="contacts__mail">srkarthik.designscape@gmail.com</p>
+                </h2>
+                <p class="contacts__mail tile__textarea tile__textarea_color_white" data-resume-field="mail">
+                    srkarthik.designscape@gmail.com
+                </p>
             </section>
-            <button class="button">Скачать резюме</button>
+            <button class="button print-button" id="print">Печать резюме</button>
         </main>
     </body>
 </html>

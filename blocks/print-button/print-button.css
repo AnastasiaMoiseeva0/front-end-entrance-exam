@@ -1,0 +1,27 @@
+.print-button {
+    position: relative;
+
+    @media print {
+        display: none;
+    }
+}
+
+.circle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+}
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
+
+.prevent-overflow {
+    position: relative;
+}

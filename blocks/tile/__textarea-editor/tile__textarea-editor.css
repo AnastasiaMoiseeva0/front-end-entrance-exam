@@ -1,0 +1,16 @@
+.tile__textarea-editor {
+    cursor: text;
+}
+
+.tile__textarea-editor:focus {
+    outline: 1px solid #3F3D3D;
+    border-radius: 4px;
+}
+
+.tile__textarea_color_white .tile__textarea-editor:focus {
+    outline: 1px solid #FFF;
+}
+
+.tile__textarea_color_green .tile__textarea-editor:focus {
+    outline: 1px solid #149063;
+}
