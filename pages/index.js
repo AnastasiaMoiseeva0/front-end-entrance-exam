@@ -1,54 +1,79 @@
-
 (function() {
-    const LOCAL_STORAGE_KEY = 'RESUME_VALUE';
-    const editableElements = document.querySelectorAll('[resume-field]');
+    class EditableElementsManager {
+        LOCAL_STORAGE_KEY = 'RESUME_VALUE';
 
-    let resume = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || {};
+        editableElements = [];
+        resume = {};
 
-    editableElements.forEach(element => {
-        const fieldName = element.getAttribute('resume-field');
+        init() {
+            this.editableElements = document.querySelectorAll('[data-resume-field]');
+            this.resume = JSON.parse(localStorage.getItem(this.LOCAL_STORAGE_KEY)) || {};
 
-        // Здесь должен быть аналог sanitize, иначе XSS
-        element.innerHTML = resume[fieldName] ? resume[fieldName]?.trim() : element.innerHTML.trim();
+            this._initGlobalEventListners();
 
-        element.setAttribute('data-auto-grow', true);
-        element.setAttribute('contenteditable', true);
+            this.editableElements.forEach((element) => {
+                const fieldName = element.getAttribute('data-resume-field');
+                this._createNestedEditor(element, fieldName);
+        
+                element.addEventListener('input', (event) => this._onEditorInput(event, fieldName));
+            });
+            
+            this._adjustAllEditorsSize();
+        }
 
-        element.addEventListener('input', event => {
-            resume[fieldName] = event.target.innerHTML;
-            localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(resume));
-        })
-    });
-})();
+        destroy() {
+            this.editableElements.forEach(element => element.removeEventListener(this._onEditorInput));
+        }
 
-(function() {
-    const texareas = document.querySelectorAll('[data-auto-grow]');
+        _onEditorInput(event, fieldName) {
+            this._fillValueFromStorage(event, fieldName);
+            this._adjustEditorSize(event.target);
+        }
 
-    function autoGrow(element) {
-        const DEFAULT_HEIGHT = window.getComputedStyle(element).lineHeight;
+        _initGlobalEventListners() {
+            window.addEventListener('load', () => {
+                this._adjustAllEditorsSize();
+            });
+            window.addEventListener('resize', () => {
+                this._adjustAllEditorsSize();
+            });
+        }
 
-        element.style.scrollbarWidth = "none";
-        element.style.height = 0;
-        element.style.height = element.scrollHeight ? element.scrollHeight + "px" : DEFAULT_HEIGHT;
-        element.style.removeProperty('scrollbar-width');
+        _createNestedEditor(element, fieldName) {
+            const editor = document.createElement('div');
+            element.setAttribute('data-resume-field-wrapper', true);
+            editor.classList.add('tile__textarea-editor');
+
+            const value = this.resume[fieldName] ? this.resume[fieldName]?.trim() : element.innerText.trim();
+
+            element.innerText = '';
+            editor.innerText = value;
+
+            editor.setAttribute('contenteditable', 'plaintext-only');
+            element.appendChild(editor);
+        }
+
+        _fillValueFromStorage (event, fieldName) {
+            this.resume[fieldName] = event.target.innerText;
+            localStorage.setItem(this.LOCAL_STORAGE_KEY, JSON.stringify(this.resume));
+        }
+
+        _adjustEditorSize(element) {
+            const DEFAULT_HEIGHT = window.getComputedStyle(element).lineHeight;
+    
+            const parent = element.closest('[data-resume-field-wrapper]');
+            parent.style.height = element.scrollHeight ? element.scrollHeight + 'px' : DEFAULT_HEIGHT;
+        }
+
+            
+        _adjustAllEditorsSize() {
+            this.editableElements.forEach((element) => {
+                this._adjustEditorSize(element);
+            });
+        }
     }
-    
-    function syncTextareas(elements) {
-        elements.forEach(element => {
-            autoGrow(element)
-        });
-    };
-    
-    window.addEventListener('load', function() {
-        syncTextareas(texareas);
-      });
-    window.addEventListener('resize', function() {
-        syncTextareas(texareas);
-      });
-      
-    texareas.forEach((element) => {
-        element.addEventListener('input', () => {
-            autoGrow(element);
-        })
-    });
+
+    const manager = new EditableElementsManager();
+
+    manager.init();
 })();

@@ -18,6 +18,7 @@
 @import url(../blocks/tile/__tag/_color/tile__tag_color_black.css);
 @import url(../blocks/tile/__tag/_color/tile__tag_color_white.css);
 @import url(../blocks/tile/__textarea/tile__textarea.css);
+@import url(../blocks/tile/__textarea-editor/tile__textarea-editor.css);
 @import url(../blocks/tile/__textarea/_color/tile__textarea_color_white.css);
 @import url(../blocks/tile/__textarea/_color/tile__textarea_color_green.css);
 @import url(../blocks/profile/profile.css);
@@ -38,9 +39,6 @@
 @import url(../blocks/experience/__busyness/experience__busyness.css);
 @import url(../blocks/experience/__busyness/_gray/experience__busyness_gray.css);
 @import url(../blocks/tools/tools.css);
-@import url(../blocks/tools/__container/tools__container.css);
-@import url(../blocks/tools/__tag/tools__tag.css);
-@import url(../blocks/tools/__icon-wrapper/tools__icon-wrapper.css);
 @import url(../blocks/education/education.css);
 @import url(../blocks/education/__container/education__container.css);
 @import url(../blocks/education/__card/education__card.css);
@@ -55,3 +53,4 @@
 @import url(../blocks/contacts/contacts.css);
 @import url(../blocks/contacts/__mail/contacts__mail.css);
 @import url(../blocks/button/button.css);
+@import url(../blocks/print-button/print-button.css);

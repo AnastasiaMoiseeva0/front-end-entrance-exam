@@ -1,7 +1,3 @@
 .tile__textarea_color_white {
     color: #FFF;
 }
-
-.tile__textarea_color_white.tile__textarea:focus {
-    outline: 1px solid #FFF;
-}

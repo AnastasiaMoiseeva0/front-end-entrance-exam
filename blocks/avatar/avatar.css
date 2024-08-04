@@ -1,5 +1,5 @@
 .avatar {
-    width: 124px;
-    height: 124px;
+    width: 100%;
     grid-area: 1/1/2/2;
+    border-radius: 12px;
 }
