@@ -39,6 +39,10 @@
 @import url(../blocks/experience/__busyness/experience__busyness.css);
 @import url(../blocks/experience/__busyness/_gray/experience__busyness_gray.css);
 @import url(../blocks/tools/tools.css);
+@import url(../blocks/tools/__container/tools__container.css);
+@import url(../blocks/tools/__tag/tools__tag.css);
+@import url(../blocks/tools/__icon-wrapper/tools__icon-wrapper.css);
+@import url(../blocks/tools/__item/tools__item.css);
 @import url(../blocks/education/education.css);
 @import url(../blocks/education/__container/education__container.css);
 @import url(../blocks/education/__card/education__card.css);

@@ -3,3 +3,15 @@
     grid-template-columns: max-content max-content;
     gap: 16px;
 }
+
+@media screen and (max-width: 768px) {
+    .tools__icon-wrapper {
+        grid-template-columns: repeat(3, max-content);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .tools__icon-wrapper {
+        grid-template-columns: repeat(6, max-content);
+    }
+}

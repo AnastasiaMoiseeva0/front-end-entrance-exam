@@ -3,3 +3,9 @@
     border-radius: 6px;
     max-width: 54px;
 }
+
+@media screen and (max-width: 768px) {
+    .tile_size_s {
+        max-width: none;
+    }
+}
