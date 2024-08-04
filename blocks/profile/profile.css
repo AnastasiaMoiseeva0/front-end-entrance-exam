@@ -1,3 +1,9 @@
 .profile {
     grid-area: 1/2/2/3;
 }
+
+@media screen and (max-width: 600px) {
+    .profile {
+        grid-area: 1/2/2/3;
+    }
+}

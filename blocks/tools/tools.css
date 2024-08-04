@@ -1,10 +1,9 @@
-
-@import url(./__container/tools__container.css);
-@import url(./__tag/tools__tag.css);
-@import url(./__icon-wrapper/tools__icon-wrapper.css);
-@import url(./__item/tools__item.css);
-
-
 .tools {
     grid-area: 2/4/3/5;
+}
+
+@media screen and (max-width: 600px) {
+    .tools {
+        grid-area: 4/1/4/3;
+    }
 }
